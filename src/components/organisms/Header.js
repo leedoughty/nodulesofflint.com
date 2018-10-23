@@ -7,6 +7,7 @@ const Main = styled.header`
   left: 50%;
   font-family: "Baskerville";
   color: white;
+  text-align: center;
 `;
 
 class Header extends Component {
