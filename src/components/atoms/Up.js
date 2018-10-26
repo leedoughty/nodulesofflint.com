@@ -10,6 +10,7 @@ const Caret = styled.div`
 
 class Up extends Component {
 handleClick = () => {
+  window.scrollTo(0,0);
 }
     render() {
       return (
