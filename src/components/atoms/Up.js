@@ -4,8 +4,6 @@ import styled from 'styled-components';
 const Caret = styled.div`
   font-size: 8px;
   color: white;
-  position: absolute;
-  right: 3%;
 `;
 
 class Up extends Component {
