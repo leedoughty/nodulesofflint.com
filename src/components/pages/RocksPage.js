@@ -25,6 +25,12 @@ const NodulesContainer = styled.div`
   display: grid;
   justify-content: center;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @media (max-width: 500px) {
+    grid-template-columns: 1fr;
+  }
   grid-column-gap: 0em;
   grid-row-gap: 3em;
 `;
@@ -33,7 +39,11 @@ class RocksPage extends Component {
   state = {
     // selectedImage: ""
     selectedImage: "",
-imageOrderArr: Array.from({length: 200}, (_, i) => i + 1)
+    imageOrderArr: Array.from({length: 200}, (_, i) => i + 1)
+  }
+
+  componentDidMount() {
+    this.randomiseImages();
   }
 
   showModal = (event) => {
