@@ -5,6 +5,7 @@ import { Header, Footer } from '../organisms';
 import Nodules from '../organisms/Nodules';
 import Nodule from "../molecules/Nodule";
 import Modal from '../organisms/Modal';
+import _ from "lodash";
 
 const Container = styled.div`
   color: white;
@@ -30,7 +31,9 @@ const NodulesContainer = styled.div`
 
 class RocksPage extends Component {
   state = {
-    selectedImage: ""
+    // selectedImage: ""
+    selectedImage: "",
+imageOrderArr: Array.from({length: 200}, (_, i) => i + 1)
   }
 
   showModal = (event) => {
@@ -41,15 +44,40 @@ class RocksPage extends Component {
     this.setState({selectedImage: ""})
   }
 
+  randomiseArr = (arr) => {
+
+  var currentIndex = arr.length;
+	  var temporaryValue, randomIndex;
+	// While there remain elements to shuffle...
+	while (0 !== currentIndex) {
+		// Pick a remaining element...
+		randomIndex = Math.floor(Math.random() * currentIndex);
+		currentIndex -= 1;
+		// And swap it with the current element.
+		temporaryValue = arr[currentIndex];
+		arr[currentIndex] = arr[randomIndex];
+		arr[randomIndex] = temporaryValue;
+	}
+	return arr;
+  }
+  // Purposely verbose function name for demo purposes!
+  randomiseImages = () => {
+    this.setState({imageOrderArr: this.randomiseArr(this.state.imageOrderArr)})
+  }
+
+
   render() {
     return (
       <div>
         <Container>
           <Header
+            clickFn={this.randomiseImages}
             title='NODULES OF FLINT'
           />
           <NodulesContainer>
-            {this.props.nodules.map(n => <Nodule key={n} number={n} onClick={this.showModal} />)}
+            {console.log("hello")}
+            {/* {this.props.nodules.map(n => <Nodule key={n} number={n} onClick={this.showModal} />)} */}
+            {this.state.imageOrderArr.map(n => <Nodule key={n} number={n} onClick={this.showModal} />)}
           </NodulesContainer>
           <Footer
             name='Photography by Paige Scalco. Coded by Lee Doughty. 2018'
@@ -61,8 +89,15 @@ class RocksPage extends Component {
   }
 }
 
-RocksPage.defaultProps = {
-  nodules: Array.from({length: 200}, (_, i) => i + 1)
-}
+// createArray = (length) => {
+//   const collection = [...new Array(length)].map((_, i) => i + 1);
+//   console.log(collection);
+//   return _.shuffle(collection);
+// }
+
+// RocksPage.defaultProps = {
+//   nodules: _.shuffle(Array.from({length: 200}, (_, i) => i + 1))
+  // nodules: this.createArray(200)
+// }
 
 export default RocksPage;

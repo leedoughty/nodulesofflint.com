@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import About from '../atoms/About';
 import Up from '../atoms/Up';
@@ -14,6 +13,7 @@ const Main = styled.header`
   text-decoration: none;
   left: 50%;
   font-family: "Baskerville";
+  font-weight: lighter;
   color: white;
   text-align: center;
 `;
@@ -32,6 +32,8 @@ const TopBlock = styled.header`
   padding: 45px 1vw 35px 1vw;
 `;
 
+// create its own div for styled components to put question mark and up
+
 class Header extends Component {
   render() {
     return (
@@ -40,7 +42,8 @@ class Header extends Component {
           <Main>
             <About/>
               <Link style={{'textDecoration':'none', 'color':'white'}} to="/rockspage">
-                <h1>{this.props.title}</h1>
+                {/* <h1>{this.props.title}</h1> */}
+                <h1 onClick={this.props.clickFn}>{this.props.title}</h1>
               </Link>
             <Up/>
           </Main>
