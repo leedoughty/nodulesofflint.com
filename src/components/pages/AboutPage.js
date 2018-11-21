@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-// import { About } from '../atoms';
 import { Header, Footer } from '../organisms';
 
 const Container = styled.div`

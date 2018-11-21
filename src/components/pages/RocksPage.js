@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { About } from '../atoms';
 import { Header, Footer } from '../organisms';
-import Nodules from '../organisms/Nodules';
 import Nodule from "../molecules/Nodule";
 import Modal from '../organisms/Modal';
 import _ from "lodash";
@@ -38,7 +37,6 @@ const NodulesContainer = styled.div`
 
 class RocksPage extends Component {
   state = {
-    // selectedImage: ""
     selectedImage: "",
     imageOrderArr: Array.from({length: 200}, (_, i) => i + 1)
   }
@@ -57,25 +55,20 @@ class RocksPage extends Component {
 
   randomiseArr = (arr) => {
 
-  var currentIndex = arr.length;
-	  var temporaryValue, randomIndex;
-	// While there remain elements to shuffle...
+  let currentIndex = arr.length;
+	  let temporaryValue, randomIndex;
 	while (0 !== currentIndex) {
-		// Pick a remaining element...
 		randomIndex = Math.floor(Math.random() * currentIndex);
 		currentIndex -= 1;
-		// And swap it with the current element.
 		temporaryValue = arr[currentIndex];
 		arr[currentIndex] = arr[randomIndex];
 		arr[randomIndex] = temporaryValue;
 	}
 	return arr;
   }
-  // Purposely verbose function name for demo purposes!
   randomiseImages = () => {
     this.setState({imageOrderArr: this.randomiseArr(this.state.imageOrderArr)})
   }
-
 
   render() {
     return (
