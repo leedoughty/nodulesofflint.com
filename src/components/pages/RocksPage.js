@@ -77,8 +77,8 @@ class RocksPage extends Component {
             clickFn={this.randomiseImages}
             title='NODULES OF FLINT'
           />
-          <NodulesContainer>
-            {this.state.imageOrderArr.map(n => <Nodule key={n} number={n} onClick={this.showModal} />)}
+          <NodulesContainer data-testid="images of rocks">
+            {this.state.imageOrderArr.map(n => <Nodule key={n} class=".test" number={n} onClick={this.showModal} />)}
           </NodulesContainer>
           <Footer
             name='Photography by Paige Scalco. Coded by Lee Doughty. 2018'
