@@ -5,10 +5,8 @@ import _ from "lodash";
 
 const ModalContainer = styled.div`
   box-sizing: content-box;
-
   display: grid;
   place-content: center;
-
   position: fixed;
   top: 0;
   left: 0;
@@ -26,9 +24,7 @@ const ModalPane = styled.div`
 
 const CloseBtn = styled.button`
   --btn-wh: calc(var(--icon-wh) - 2px);
-
   all: unset;
-
   overflow: hidden;
   position: absolute;
   right: 10px;
@@ -40,7 +36,6 @@ const CloseBtn = styled.button`
 
   &::before {
     transition: 0.5s color;
-
     content: "×";
     display: block;
     width: var(--btn-wh);
@@ -56,14 +51,11 @@ const CloseBtn = styled.button`
     color: #fff;
   }
 `
-
 class Modal extends Component {
   render() {
-
     if(this.props.image.length === 0) {
       return null;
     }
-
     return (
       <ModalContainer>
         <ModalPane>

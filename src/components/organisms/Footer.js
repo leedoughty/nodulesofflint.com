@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 const FooterStyle = {
   'position': 'fixed',
   'paddingBottom': '2%',
-  'paddingLeft': '2%',
   'paddingRight': '0%',
   'left': '0',
   'bottom': '0',

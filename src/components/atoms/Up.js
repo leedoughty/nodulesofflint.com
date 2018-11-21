@@ -4,6 +4,7 @@ import styled from 'styled-components';
 const Caret = styled.div`
   font-size: 8px;
   color: white;
+  cursor: pointer;
 `;
 
 class Up extends Component {

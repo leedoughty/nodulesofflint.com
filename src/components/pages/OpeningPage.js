@@ -18,6 +18,7 @@ const text = {
 }
 
 const GifContainer = styled.div`
+  margin-top: 5%;
   text-align: center;
 `;
 

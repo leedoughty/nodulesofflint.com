@@ -19,6 +19,7 @@ const text = {
 }
 
 const NodulesContainer = styled.div`
+  margin-left: 1vw;
   text-align: center;
   width: 100%;
   margin-top: 7em;
@@ -86,7 +87,6 @@ class RocksPage extends Component {
           />
           <NodulesContainer>
             {console.log("hello")}
-            {/* {this.props.nodules.map(n => <Nodule key={n} number={n} onClick={this.showModal} />)} */}
             {this.state.imageOrderArr.map(n => <Nodule key={n} number={n} onClick={this.showModal} />)}
           </NodulesContainer>
           <Footer
@@ -98,16 +98,5 @@ class RocksPage extends Component {
     );
   }
 }
-
-// createArray = (length) => {
-//   const collection = [...new Array(length)].map((_, i) => i + 1);
-//   console.log(collection);
-//   return _.shuffle(collection);
-// }
-
-// RocksPage.defaultProps = {
-//   nodules: _.shuffle(Array.from({length: 200}, (_, i) => i + 1))
-  // nodules: this.createArray(200)
-// }
 
 export default RocksPage;

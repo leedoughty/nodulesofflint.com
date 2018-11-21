@@ -12,7 +12,6 @@ function createArray(length) {
   const collection = [...new Array(length)].map((_, i) => i + 1);
   console.log(collection);
   return _.shuffle(collection);
-  // return Array.from({length}, (_, i) => i + 1)
 }
 
 export default Nodules;
