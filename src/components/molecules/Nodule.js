@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const Rock = styled.img`
-  width: 100%;
+  width: 80%;
 `;
 
 class Nodule extends Component {
