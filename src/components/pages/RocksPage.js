@@ -6,8 +6,6 @@ import Nodule from "../molecules/Nodule";
 import Modal from '../organisms/Modal';
 import _ from "lodash";
 
-import {render, fireEvent, cleanup, waitForElement} from 'react-testing-library'
-
 const Container = styled.div`
   color: white;
   background-color: #000;
@@ -56,9 +54,8 @@ class RocksPage extends Component {
   }
 
   randomiseArr = (arr) => {
-
   let currentIndex = arr.length;
-	  let temporaryValue, randomIndex;
+	let temporaryValue, randomIndex;
 	while (0 !== currentIndex) {
 		randomIndex = Math.floor(Math.random() * currentIndex);
 		currentIndex -= 1;
@@ -81,7 +78,6 @@ class RocksPage extends Component {
             title='NODULES OF FLINT'
           />
           <NodulesContainer>
-            {console.log("hello")}
             {this.state.imageOrderArr.map(n => <Nodule key={n} number={n} onClick={this.showModal} />)}
           </NodulesContainer>
           <Footer
