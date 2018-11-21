@@ -6,6 +6,8 @@ import Nodule from "../molecules/Nodule";
 import Modal from '../organisms/Modal';
 import _ from "lodash";
 
+import {render, fireEvent, cleanup, waitForElement} from 'react-testing-library'
+
 const Container = styled.div`
   color: white;
   background-color: #000;
