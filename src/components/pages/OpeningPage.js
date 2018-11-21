@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { About } from '../atoms';
 import { Header, Footer } from '../organisms';
-import RocksPage from './RocksPage';
 import loading from '../atoms';
 import { Link } from 'react-router-dom'
 

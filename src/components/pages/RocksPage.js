@@ -28,7 +28,7 @@ const NodulesContainer = styled.div`
   @media (max-width: 800px) {
     grid-template-columns: 1fr 1fr 1fr;
   }
-  @media (max-width: 500px) {
+  @media (max-width: 630px) {
     grid-template-columns: 1fr;
   }
   grid-column-gap: 0em;

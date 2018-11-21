@@ -24,15 +24,6 @@ const PageHeader = styled.header`
   padding: 45px 3vw 35px 1vw;
 `;
 
-// const TopBlock = styled.header`
-//   position: relative;
-//   width: 98vw;
-//   height: 100%;
-//   padding: 45px 1vw 35px 1vw;
-// `;
-
-// create its own div for styled components to put question mark and up
-
 class Header extends Component {
   render() {
     return (

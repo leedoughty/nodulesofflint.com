@@ -13,6 +13,9 @@ const ModalContainer = styled.div`
   width: 100vw;
   height: 100vh;
   background: #000000aa;
+  @media (max-width: 630px) {
+    visibility: hidden;
+  }
 `;
 
 const ModalPane = styled.div`
