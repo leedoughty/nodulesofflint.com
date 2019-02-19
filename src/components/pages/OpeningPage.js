@@ -8,8 +8,8 @@ import { Link } from 'react-router-dom'
 const Container = styled.div`
   color: white;
   background-color: #000;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
 `;
 
 const text = {
@@ -17,13 +17,18 @@ const text = {
 }
 
 const GifContainer = styled.div`
-  /* margin-top: 5%; */
+  height: 100vh;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const Image = styled.img`
   width: 50%;
-  align-self: center;
+  height: auto;
+  justify-content: center;
+  align-items: center;
 `;
 
 class OpeningPage extends Component {
